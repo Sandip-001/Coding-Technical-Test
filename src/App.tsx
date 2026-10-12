@@ -169,7 +169,7 @@ window.addEventListener('DOMContentLoaded', function(){
     if (!fullName.trim()) return;
     const report = {
       assessment: "Leads Digital MERN Junior Developer Test",
-      candidate: { fullName: fullName.trim(), college: college.trim(), rollNumber: rollNumber.trim() },
+      candidate: { fullName: fullName.trim(), college: college.trim(), mobileNumber: rollNumber.trim() },
       submittedAt,
       durationUsed: formatTime(DURATION - timeLeft),
       mcqScore: `${mcqScore}/7`,
@@ -223,7 +223,7 @@ window.addEventListener('DOMContentLoaded', function(){
       <div className="result-strip"><div><span>MCQ score</span><b>{mcqScore}/7</b></div><div><span>Questions attempted</span><b>{answeredCount}/15</b></div><div><span>Time used</span><b>{formatTime(DURATION-timeLeft)}</b></div></div>
       <label>Full name <i>*</i><input autoFocus value={fullName} onChange={e => setFullName(e.target.value)} placeholder="Enter your full legal name" /></label>
       <label>College name<input value={college} onChange={e => setCollege(e.target.value)} placeholder="Engineering college" /></label>
-      <label>Roll number / student ID <span className="optional">Optional</span><input value={rollNumber} onChange={e => setRollNumber(e.target.value)} placeholder="Enter roll number" /></label>
+      <label>Mobile number <span className="optional">Mandatory</span><input value={rollNumber} onChange={e => setRollNumber(e.target.value)} placeholder="Enter mobile number" /></label>
       <button className="btn btn-primary btn-wide" disabled={!fullName.trim()} onClick={saveReport}><Download size={17}/> Download and submit report</button>
       <p className="privacy-note">Please do not close this tab until the report has downloaded.</p>
     </div></div>;
